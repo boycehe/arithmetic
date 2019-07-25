@@ -10,6 +10,8 @@
 		0095D1EB22E7E90600C7ECBB /* test_stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 0095D1E622E7E90600C7ECBB /* test_stack.c */; };
 		0095D1EC22E7E90600C7ECBB /* stack.c in Sources */ = {isa = PBXBuildFile; fileRef = 0095D1E722E7E90600C7ECBB /* stack.c */; };
 		0095D1EF22E7E92A00C7ECBB /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = 0095D1EE22E7E92A00C7ECBB /* main.c */; };
+		009EE63922EA2E9B0058C402 /* binary_tree.c in Sources */ = {isa = PBXBuildFile; fileRef = 009EE63822EA2E9B0058C402 /* binary_tree.c */; };
+		009EE63C22EA2EA90058C402 /* test_binary_tree.c in Sources */ = {isa = PBXBuildFile; fileRef = 009EE63B22EA2EA90058C402 /* test_binary_tree.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +34,10 @@
 		0095D1E922E7E90600C7ECBB /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
 		0095D1ED22E7E90F00C7ECBB /* hc_constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = hc_constant.h; sourceTree = SOURCE_ROOT; };
 		0095D1EE22E7E92A00C7ECBB /* main.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		009EE63722EA2E9B0058C402 /* binary_tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = binary_tree.h; sourceTree = "<group>"; };
+		009EE63822EA2E9B0058C402 /* binary_tree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = binary_tree.c; sourceTree = "<group>"; };
+		009EE63A22EA2EA90058C402 /* test_binary_tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = test_binary_tree.h; sourceTree = "<group>"; };
+		009EE63B22EA2EA90058C402 /* test_binary_tree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = test_binary_tree.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,10 @@
 		0095D1EA22E7E90600C7ECBB /* binaryTree */ = {
 			isa = PBXGroup;
 			children = (
+				009EE63722EA2E9B0058C402 /* binary_tree.h */,
+				009EE63822EA2E9B0058C402 /* binary_tree.c */,
+				009EE63A22EA2EA90058C402 /* test_binary_tree.h */,
+				009EE63B22EA2EA90058C402 /* test_binary_tree.c */,
 			);
 			path = binaryTree;
 			sourceTree = "<group>";
@@ -148,6 +158,8 @@
 			files = (
 				0095D1EC22E7E90600C7ECBB /* stack.c in Sources */,
 				0095D1EB22E7E90600C7ECBB /* test_stack.c in Sources */,
+				009EE63922EA2E9B0058C402 /* binary_tree.c in Sources */,
+				009EE63C22EA2EA90058C402 /* test_binary_tree.c in Sources */,
 				0095D1EF22E7E92A00C7ECBB /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
