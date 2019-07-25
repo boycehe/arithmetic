@@ -16,9 +16,9 @@ hc_bool isFull(hc_stack* stack);
 
 hc_bool isEmpty(hc_stack* stack);
 
-void push(hc_stack* stack, stack_item_type item);
+hc_bool push(hc_stack* stack, stack_item_type item);
 
-void pop(hc_stack* stack,stack_item_type* item);
+hc_bool pop(hc_stack* stack,stack_item_type* item);
 
 void printStack(hc_stack *stack);
 

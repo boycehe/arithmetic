@@ -7,7 +7,7 @@
 hc_stack* initStack(void){
 	
 	hc_stack *stack = (hc_stack *)malloc(sizeof(hc_stack));
-	stack->base = (int *)malloc(sizeof(stack_item_type)*kHCStackSize);
+	stack->base = (stack_item_type *)malloc(sizeof(stack_item_type)*kHCStackSize);
 	stack->top  = 0;	
 	stack->size = kHCStackSize;
 	return stack;
@@ -35,25 +35,31 @@ hc_bool isEmpty(hc_stack *stack){
 }
 
 
-void push(hc_stack* stack, stack_item_type item) {
+hc_bool push(hc_stack* stack, stack_item_type item) {
 	
 	if (isFull(stack) == hc_true) {
-		stack->base = (stack_item_type *)realloc(stack->base, stack->size + kHCStackSize);
+        //此处犯了很低级的错误没有*sizeof(stack_item_type) 谨记！！！
+		stack_item_type *base = (stack_item_type *)realloc(stack->base, (stack->size + kHCStackSize)*sizeof(stack_item_type));
+		if(base == NULL) return hc_false;
+		stack->base = base;
 		stack->size = stack->size + kHCStackSize;
 	}
-	stack->base[stack->top] = item;
+	*(stack->base+stack->top) = item;
 	stack->top++;
 	
+	return hc_true;
 }
 
-void pop(hc_stack* stack,stack_item_type* item){
-	
+hc_bool pop(hc_stack* stack,stack_item_type* item){
+  
 	if (isEmpty(stack)) {
-		return;
+		return hc_false;
 	}
-	
-	item = &stack->base[stack->top--];
-	
+    stack->top = stack->top - 1;
+    if (item != NULL) {
+        *item = *(stack->base + stack->top);
+    }
+	return hc_true;
 }
 
 void freeStack(hc_stack *stack){
@@ -67,11 +73,8 @@ void printStack(hc_stack *stack){
 	
 	stack_item_type* tempBase = stack->base;
 	printf("print stack top--->base\n");
-	for (int index = 0;index >= stack->top;index--) {
-		
+	for (int index = 0;index < stack->top;index++) {
 		printf("%d\n",tempBase[stack->top-index-1]);
-		
 	}
-	
-	
+
 }
