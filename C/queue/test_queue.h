@@ -11,4 +11,6 @@
 
 #include <stdio.h>
 
+void test_queue(void);
+
 #endif /* test_queue_h */

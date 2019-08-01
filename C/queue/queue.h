@@ -28,9 +28,9 @@ hc_bool isFullQueue(hc_queue *queue);
 //队列是否为空
 hc_bool isEmptyQueue(hc_queue *queue);
 //添加元素到队列中
-void addItemToQueue(queue_item_type value);
+void addItemToQueue(hc_queue *queue,queue_item_type value);
 //删除队列中元素
-void deleteItemToQueue(queue_item_type value);
+void deleteItemToQueue(hc_queue *queue,queue_item_type *value);
 
 
 
